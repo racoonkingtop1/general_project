@@ -67,6 +67,10 @@ body {
     color: var(--text-color);
 }
 
+.body_scrollbar_none {
+    overflow: hidden !important;
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -272,6 +276,12 @@ header {
     z-index: 1;
     background-color: var(--accent);
     transition: 0.4s ease-in-out;
+    overflow: scroll;
+    padding: 20px 0;
+}
+
+.header__burger::-webkit-scrollbar {
+    display: none;
 }
 
 .header__burger__nav {
@@ -464,6 +474,109 @@ header {
 }
 
 
+
+/* SERVICES CLASSES */
+
+.services_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 20%;
+}
+
+.services {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 33px;
+    width: min-content;
+}
+
+.services_title {
+    width: 294px;
+    height: 131px;
+}
+
+.services_title aside {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 2px 3px;
+    background: rgba(232, 232, 232, 0.5);
+    border-left: 4px solid #FFB629;
+    width: max-content;
+    /* identical to box height */
+
+
+    color: #1C1F35;
+}
+
+.services_title h2 {
+    font-family: 'Rubik';
+    font-style: normal;
+    width: 294px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 41px;
+
+    color: #1C1F35;
+}
+
+.services_specials {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.services_special {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px;
+    max-width: 391px;
+}
+
+.services_special img {
+    width: 50px;
+    height: 54px;
+    padding-right: 20px;
+    border-right: 1px solid #D8D8D8;
+}
+
+.services_special_text {
+    margin-left: 20px;
+}
+
+.services_special h3 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+    width: max-content;
+    /* identical to box height */
+
+
+    color: #1C1F35;
+}
+
+.services_special p {
+    font-family: 'Krub';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 151.52%;
+    /* or 24px */
+
+
+    color: #666C89;
+}
+
+
 /* ? АДАПТИВ */
 
 @media (max-width: 1280px) {
@@ -519,60 +632,9 @@ header {
     }
 }
 
-@media (max-width: 900px) {
-    .header__container {
-        width: 600px;
-    }
-
-    .header__top {
-        height: 90px;
-    }
-
-    .header__bottom {
-        height: 50px;
-    }
-
-    .header__top__1 img {
-        height: 20px;
-    }
-
-    .header__special__img {
-        height: 22px;
-        width: 22px;
-    }
-
-    .header__special__img img {
-        height: 12px;
-        width: 12px;
-    }
-
-    .header__special__text p {
-        font-size: 8px;
-    }
-
-    .header__bottom__nav a {
-        padding: 0 5px;
-    }
-
-    .header__bottom__nav p {
-        font-size: 10px;
-    }
-
-    .header__nav img {
-        width: 12px;
-        height: 12px;
-    }
-
-    .header__button {
-        width: 120px;
-    }
-
-    .header__button a {
-        font-size: 8px;
-    }
-
-    .photo {
-        top: -50px;
+@media (max-width: 1160px) {
+    .services_specials {
+        flex-wrap: wrap;
     }
 }
 
@@ -630,6 +692,12 @@ header {
 
     .photo {
         top: -50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .services {
+        flex-wrap: wrap;
     }
 }
 

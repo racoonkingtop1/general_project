@@ -1,107 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="header__top">
-            <div class="header__container">
-                <div class="header__top__1">
-                    <img src="assets/Logo.svg">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="js/index.js" defer></script>
+    </head>
+    <body id="body">
+        <header>
+            <div class="header__top">
+                <div class="header__container">
+                    <div class="header__top__1">
+                        <img src="assets/Logo.svg" />
+                    </div>
+                    <div class="header__top__2">
+                        <div class="header__special">
+                            <div class="header__special__img">
+                                <img src="assets/clocks.svg" />
+                            </div>
+                            <div class="header__special__text">
+                                <p>Mon - Sat 9.00 - 18.00</p>
+                                <p>Sunday Closed</p>
+                            </div>
+                        </div>
+                        <div class="header__special">
+                            <div class="header__special__img">
+                                <img src="assets/mail.svg" />
+                            </div>
+                            <div class="header__special__text">
+                                <p>Email</p>
+                                <p>contact@logistics.com</p>
+                            </div>
+                        </div>
+                        <div class="header__special">
+                            <div class="header__special__img">
+                                <img src="assets/phone.svg" />
+                            </div>
+                            <div class="header__special__text">
+                                <p>Call Us</p>
+                                <p>(00) 112 365 489</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="burger__btn">
+                        <img class="burger__btn__img" src="assets/burger.svg" />
+                    </button>
+                    <div class="header__burger w0">
+                        <div>
+                            <h2>Menu</h2>
+                            <nav class="header__burger__nav">
+                                <a href=""><p>Home</p></a>
+                                <a href=""><p>About</p></a>
+                                <a href=""><p>Pages</p></a>
+                                <a href=""><p>Project</p></a>
+                                <a href=""><p>Contact</p></a>
+                            </nav>
+                            <button class="burger__inner__button">
+                                <a href="">Request quote</a>
+                            </button>
+                            <ul class="burger__links">
+                                <li>
+                                    <a href=""><img src="assets/inst.svg" /></a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        ><img src="assets/facebook.svg"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="assets/twit.svg" /></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="assets/link.svg" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="header__top__2">
-                    <div class="header__special">
-                        <div class="header__special__img">
-                            <img src="assets/clocks.svg">
-                        </div>
-                        <div class="header__special__text">
-                            <p>Mon - Sat 9.00 - 18.00</p>
-                            <p>Sunday Closed</p>
-                        </div>
-                    </div>
-                    <div class="header__special">
-                        <div class="header__special__img">
-                            <img src="assets/mail.svg">
-                        </div>
-                        <div class="header__special__text">
-                            <p>Email</p>
-                            <p>contact@logistics.com</p>
-                        </div>
-                    </div>
-                    <div class="header__special">
-                        <div class="header__special__img">
-                            <img src="assets/phone.svg">
-                        </div>
-                        <div class="header__special__text">
-                            <p>Call Us</p>
-                            <p>(00) 112 365 489</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="burger__btn"><img class="burger__btn__img" src="assets/burger.svg"></button>
-                <div class="header__burger w0">
-                    <div>
-                        <h2>Menu</h2>
-                        <nav class="header__burger__nav">
-                            <a href=""><p>Home</p></a>
-                            <a href=""><p>About</p></a>
-                            <a href=""><p>Pages</p></a>
-                            <a href=""><p>Project</p></a>
-                            <a href=""><p>Contact</p></a>
-                        </nav>
-                        <button class="burger__inner__button"><a href="">Request quote</a></button>
-                        <ul class="burger__links">
-                            <li><a href=""><img src="assets/inst.svg"></a></li>
-                            <li><a href=""><img src="assets/facebook.svg"></a></li>
-                            <li><a href=""><img src="assets/twit.svg"></a></li>
-                            <li><a href=""><img src="assets/link.svg"></a></li>
+            </div>
+            <div class="header__bottom">
+                <div class="header__container hb">
+                    <nav class="header__bottom__nav">
+                        <a href=""><p>Home</p></a>
+                        <hr class="header__hr" />
+                        <a href=""><p>About</p></a>
+                        <hr class="header__hr" />
+                        <a href=""><p>Pages</p></a>
+                        <hr class="header__hr" />
+                        <a href=""><p>Project</p></a>
+                        <hr class="header__hr" />
+                        <a href=""><p>Contact</p></a>
+                    </nav>
+                    <div class="header__bottom__2">
+                        <ul class="header__nav">
+                            <li>
+                                <a href=""><img src="assets/inst.svg" /></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/facebook.svg" /></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/twit.svg" /></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/link.svg" /></a>
+                            </li>
                         </ul>
+                        <button class="header__button">
+                            <a href="">Request quote</a>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header__bottom">
-            <div class="header__container hb">
-                <nav class="header__bottom__nav">
-                    <a href=""><p>Home</p></a>
-                    <hr class="header__hr">
-                    <a href=""><p>About</p></a>
-                    <hr class="header__hr">
-                    <a href=""><p>Pages</p></a>
-                    <hr class="header__hr">
-                    <a href=""><p>Project</p></a>
-                    <hr class="header__hr">
-                    <a href=""><p>Contact</p></a>
-                </nav>
-                <div class="header__bottom__2">
-                    <ul class="header__nav">
-                        <li><a href=""><img src="assets/inst.svg"></a></li>
-                        <li><a href=""><img src="assets/facebook.svg"></a></li>
-                        <li><a href=""><img src="assets/twit.svg"></a></li>
-                        <li><a href=""><img src="assets/link.svg"></a></li>
-                    </ul>
-                    <button class="header__button"><a href="">Request quote</a></button>
+        </header>
+        <main>
+            <section class="preview">
+                <div class="container__preview">
+                    <div class="preview__inner">
+                        <h1 class="preview__title">
+                            Your Gateway <br />
+                            to any Destination in the World
+                        </h1>
+                        <p class="preview__subtitle">
+                            In augue ligula, feugiat ut nulla consequat. Ut est
+                            lacus, molestie in arcu no, iaculis vehicula ipsum.
+                            Nunc faucibus, nisl id dapibus finibus, enim diam
+                            interdum nulla, sed laoreet risus lectus.
+                        </p>
+                        <p class="preview__uptitle">
+                            Logistics & Supply Chain Solutions
+                        </p>
+                        <button class="preview__button button">
+                            Explore More
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <main>
-      <section class="preview">
-        <div class="container__preview">
-          <div class="preview__inner">
-            <h1 class="preview__title">Your Gateway <br> to any Destination in the World</h1>
-            <p class="preview__subtitle">In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum nulla, sed laoreet risus lectus. </p>
-            <p class="preview__uptitle">Logistics & Supply Chain Solutions</p>
-            <button class="preview__button button">Explore More</button>
-          </div>
-        </div>
-      </section>
-    </main>
-</body>
+            </section>
+
+            <section class="services_section">
+                <div class="services">
+                    <div class="services_title">
+                        <aside>What We Do</aside>
+                        <h2>Safe & Reliable Cargo Solutions</h2>
+                    </div>
+                    <div class="services_specials">
+                        <div class="specials_col">
+                            <div class="services_special">
+                                <img src="assets/boat.svg">
+                                <hr>
+                                <div class="services_special_text">
+                                    <h3>Sea Transport Services</h3>
+                                    <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                                </div>
+                            </div>
+                            <div class="services_special">
+                                <img src="assets/plane.svg">
+                                <div class="services_special_text">
+                                    <h3>Air Fright Services</h3>
+                                    <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specials_col">
+                            <div class="services_special">
+                                <img src="assets/house.svg">
+                                <div class="services_special_text">
+                                    <h3>Warehousing Services</h3>
+                                    <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                                </div>
+                            </div>
+                            <div class="services_special">
+                                <img src="assets/truck.svg">
+                                <div class="services_special_text">
+                                    <h3>Local Shipping Services</h3>
+                                    <p>Following the quality of our service thus having gained trust of our many clients.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
