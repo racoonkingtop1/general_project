@@ -1,3 +1,49 @@
+/* FONTS */
+
+/* krub-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Krub';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/krub-v9-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/krub-v9-latin-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/rubik-v26-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/rubik-v26-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/rubik-v26-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/rubik-v26-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+/* VARS */
+:root {
+  --main-font: 'Krub', sans-serif;
+  --second-font: 'Rubik', sans-serif;
+  --accent: #091242;
+  --font-weight: 500;
+  --text-color: #666C89;
+  --line-height: 151.52%;
+}
+
+
+
 /* ! ГЛОБАЛЬНЫЕ СТИЛИ */
 body::-webkit-scrollbar {
     width: 8px;
@@ -10,6 +56,34 @@ body::-webkit-scrollbar-thumb {
 
 body {
     margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font: inherit;
 }
 
 .dnone {
@@ -24,6 +98,7 @@ body {
 
 header {
     z-index: 10;
+    position: relative;
 }
 
 .header__top {
@@ -33,7 +108,7 @@ header {
     flex-wrap: nowrap;
     height: 160px;
 
-    background: #091242;
+    background: var(--accent);
     z-index: 10;
 }
 
@@ -82,7 +157,6 @@ header {
 
 .header__special__text p {
     margin: auto;
-    font-family: 'Krub';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -96,7 +170,8 @@ header {
 }
 
 .header__bottom {
-    position: relative;
+    position: absolute;
+    width: 100%;
     height: 78px;
     display: flex;
     justify-content: center;
@@ -122,7 +197,7 @@ header {
     margin: auto;
     padding: 0 10px;
 
-    font-family: 'Krub';
+    font-family: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -195,7 +270,7 @@ header {
     width: 200px;
     height: 100vh;
     z-index: 1;
-    background-color: #091242;
+    background-color: var(--accent);
     transition: 0.4s ease-in-out;
 }
 
@@ -215,7 +290,7 @@ header {
     margin: auto;
     padding: 0 10px;
 
-    font-family: 'Krub';
+    font-family: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
@@ -290,6 +365,103 @@ header {
     z-index: 0;
 }
 
+
+/* PREVIEW SECTION */
+
+.preview {
+  padding-top: 254px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  background-image:  url('../assets/head-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+.container__preview {
+  min-height: 100vh;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.preview__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 555px;
+}
+
+.preview__title {
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-family: var(--second-font);
+  font-weight: 700;
+  line-height: 71px;
+  font-size: 60px;
+}
+
+.preview__subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.preview__uptitle {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  order: -1;
+  
+  border-left: 4px solid #FFB629;
+  font-family: var(--second-font);
+  font-weight: 400;
+  line-height: 17px;
+  font-size: 14px;
+  
+  background: rgba(4, 28, 55, 0.5);
+}
+
+.preview__button {
+  position: relative;
+  width: 194px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  background: linear-gradient(94.06deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%);
+  color: #23212A;
+  line-height: 135.02%;
+  font-weight: 500;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.preview__button:hover,
+.preview__button:focus {
+  background: linear-gradient(70deg, #ffaa00 -1.21%, #ffe588 58.66%, #FFD7A6 116.84%);
+}
+
+.preview__button::after {
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 105px;
+  right: -30px;
+  transform: rotate(30deg);
+  top: 20px;
+  background: #ffffff;
+  border-radius: 50px/100px;
+}
 
 
 /* ? АДАПТИВ */
